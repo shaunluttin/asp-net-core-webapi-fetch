@@ -17,7 +17,6 @@ namespace temp01.Controllers
         [HttpPut()]
         public ActionResult Put([FromBody] MyModel value)
         {
-            Console.WriteLine("==================");
             return new JsonResult(value);
         }
 
