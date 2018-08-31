@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <p>Open the browser's console to see the output.</p>
+
+    <script type="text/javascript">
+        fetch('https://localhost:5001/api/values', { 
+            method: 'PUT',
+            headers: {
+                "Content-Type": "application/json;",
+            },
+            body: JSON.stringify({ 
+                id: 10,
+                fromDate: '02.12.2017'
+            })
+        })
+        .then(response => response.json())
+        .then(json => console.log(json));
+
+    </script>
+  </body>
+</html>
